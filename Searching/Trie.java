@@ -9,7 +9,7 @@ class Trie{
   public void insert(String word){
     Node curr = root;
     for (int i = 0; i < word.length(); i++){
-      char c = curr.charAt(i);
+      char c = word.charAt(i);
       if (curr.children[c - 'a'] == null ){
         curr.children[c - 'a'] = new Node(c);
       }
@@ -29,7 +29,7 @@ class Trie{
     return getNode(prefix) != null;
   }
   
-  private Node getNode(int word){
+  private Node getNode(String word){
     Node curr = root;
     for (int i = 0; i < word.length(); i++ ){
       char c = word.charAt(i);
