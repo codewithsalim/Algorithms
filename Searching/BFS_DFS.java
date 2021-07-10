@@ -29,6 +29,7 @@ class Graph{
       while( it.hasNext() ){
         int adj = it.next();
         if (! visited[adj]){
+          visited[adj] = true;
           queue.add(adj);
         }      
       }
