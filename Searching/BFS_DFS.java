@@ -16,6 +16,26 @@ class Graph{
     adjList[source].add(destination);
   }
   
+  //Breadth first search
+  void BFS(int start){
+    LinkedList<Integer> queue = new LinkedList<Integer> ();
+    visited[start] = true;
+    queue.add(start);
+    
+    while ( queue.size() != 0 ){
+      start = queue.poll();
+      Sytem.out.println( start + " ");
+      Iterator<Integer> it = adjList[vertex].listIteraor();
+      while( it.hasNext() ){
+        int adj = it.next();
+        if (! visited[adj]){
+          queue.add(adj);
+        }      
+      }
+    }
+    
+  }
+  
   //Depth first search
   void DFS(int start){
     visited[start] = true;
