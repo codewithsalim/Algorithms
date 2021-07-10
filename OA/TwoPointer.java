@@ -1,4 +1,7 @@
 public List<int[]> findPairs(int[][] a, int[][] b, int target) {
+        
+    // a = [[1, 8], [3, 9 ], [2, 15]] <-- j
+    // b = [[1, 8], [2, 11], [3, 12]] <-- i
         Arrays.sort(a, (int[] o1, int[] o2) -> o1[1] - o1[1]);
         Arrays.sort(b, (int[] o1, int[] o2) -> o1[1] - o1[1]);
 
